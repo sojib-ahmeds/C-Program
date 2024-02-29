@@ -1,10 +1,14 @@
 #include<stdio.h>
 int main(){
-int number,i;
-printf("Enter Your number :");
+int number;
+printf("Enter your Number :");
 scanf("%d",&number);
-for(i=1;i<=10;i++){
-    printf("%d * %d = %d\n",number,i,number*i);
+
+if(number % 2 ==0){
+    printf("%d Number Is Even ",number);
+}
+else{
+     printf("%d Number Is Odd",number);
 }
 
 return 0;
