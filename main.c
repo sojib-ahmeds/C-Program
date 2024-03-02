@@ -1,19 +1,20 @@
 #include<stdio.h>
+long int fac(int n);
 int main(){
-int year;
-printf("Enter Your year :");
-scanf("%d",&year);
-if(year % 400 == 0){
-    printf("%d is leep Year. ",year);
-}
-else if(year % 100 ==0){
-    printf("%d is not leep Year. ",year);
-}
-else if(year % 4 == 0){
-    printf("%d is leep Year. ",year);
-}
-else {
-    printf("%d is not leep Year. ",year);
-}
+int number;
+long int result;
+printf("Enter The Number :");
+scanf("%d",&number);
+result=fac(number);
+
+printf("Result =%ld",result);
 return 0;
+}
+long int fac(int n){
+if(n>=1){
+    return n*fac(n-1);
+}
+    else{
+        return 1;
+    }
 }
